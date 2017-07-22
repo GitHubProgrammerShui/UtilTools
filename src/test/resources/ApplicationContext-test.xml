@@ -6,4 +6,8 @@
 	<bean id="propBean" class="shui.utiltools.reader.spring.SpringPropertiesReaderBean">
 		<property name="location" value="classpath:prop.xml"/>
 	</bean>
+	<bean id="propScanner" class="shui.utiltools.reader.spring.BeanPropertiesScanner">
+		<property name="propertiesReader" ref="propBean"/>
+		<property name="basePackage" value="shui.utiltools.loader"/>
+	</bean>
 </beans>

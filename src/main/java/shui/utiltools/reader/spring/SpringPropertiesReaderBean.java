@@ -23,7 +23,6 @@ public class SpringPropertiesReaderBean extends PropertiesReader implements Bean
 	}
 	@Override
 	public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException{
-		System.out.println("开始从此路径加载数据:"+location);
 		this.load(location);
 	}
 }

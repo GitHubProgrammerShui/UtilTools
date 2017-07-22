@@ -7,8 +7,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import shui.utiltools.reader.spring.SpringPropertiesReaderBean;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:ApplicationContext-test.xml")
 public class SpringPropertiesReader{
@@ -18,6 +16,7 @@ public class SpringPropertiesReader{
 	
 	@Test
 	public void testContext(){
-		SpringPropertiesReaderBean reader=context.getBean(SpringPropertiesReaderBean.class);
+//		SpringPropertiesReaderBean reader=context.getBean(SpringPropertiesReaderBean.class);
+		System.out.println("测试");
 	}
 }
