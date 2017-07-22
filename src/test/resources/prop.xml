@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties xmlns="http://www.shui.org/PropertiesReader-0.0.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.shui.org/PropertiesReader-0.0.1
+		http://www.shui.org/PropertiesReader-0.0.1.xsd">
+	
+	<property key="stringkey1">
+		<string>hello string key 1</string>
+	</property>
+	<property key="listkey2">
+		<list>
+			<string>hello list key 2</string>
+			<string>hello list key 2</string>
+			<string>hello list key 2</string>
+		</list>
+	</property>
+	<property key="mapkey3">
+		<map>
+			<entry key="entry1">
+				<string>hello map key 3 entry 1</string>
+			</entry>
+			<entry key="entry2">
+				<string>hello map key 3 entry 2</string>
+			</entry>
+			<entry key="entry3">
+				<string>hello map key 3 entry 3</string>
+			</entry>
+		</map>
+	</property>
+	<property key="innerList">
+		<list>
+			<list>
+				<string>hello world 0-0</string>
+				<string>hello world 0-1</string>
+			</list>
+			<list>
+				<list>
+					<string>hello world 1-0-0</string>
+					<string>hello world 1-0-1</string>
+				</list>
+				<list>
+					<string>hello world 1-1-0</string>
+					<string>hello world 1-1-1</string>
+				</list>
+			</list>
+		</list>
+	</property>
+	
+	<property key="innerMap">
+		<map>
+			<entry key="map0">
+				<map>
+					<entry key="map00"><string>hello world map00</string></entry>
+					<entry key="map01"><string>hello world map01</string></entry>
+				</map>
+			</entry>
+			<entry key="map1">
+				<map>
+					<entry key="map10">
+						<map>
+							<entry key="map100"><string>hello world map100</string></entry>
+							<entry key="map101"><string>hello world map101</string></entry>
+						</map>
+					</entry>
+					<entry key="map11">
+						<map>
+							<entry key="map110"><string>hello worldmap110</string></entry>
+							<entry key="map111"><string>hello worldmap111</string></entry>
+							<entry key="map112"><string>hello worldmap112</string></entry>
+						</map>
+					</entry>
+				</map>
+			</entry>
+		</map>
+	</property>
+	<property key="collection">
+		<list>
+			<map>
+				<entry key="coll00">
+					<list>
+						<string>hello coll000</string>
+						<string>hello coll001</string>
+					</list>
+				</entry>
+				<entry key="coll01"><string>hello coll01</string></entry>
+			</map>
+			<map>
+				<entry key="coll10">
+					<map>
+						<entry key="coll100">
+							<map>
+								<entry key="coll1000"><string>hello coll1000</string></entry>
+								<entry key="coll1001"><string>hello coll1001</string></entry>
+							</map>
+						</entry>
+					</map>
+				</entry>
+				<entry key="coll11">
+					<map>
+						<entry key="coll110">
+							<list>
+								<string>hello coll1100</string>
+								<string>hello coll1101</string>
+							</list>
+						</entry>
+						<entry key="coll111"><string>hello coll111</string></entry>
+					</map>
+				</entry>
+			</map>
+		</list>
+	</property>
+</properties>
