@@ -8,13 +8,15 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
 import shui.utiltools.exception.PropertiesInjectException;
 import shui.utiltools.reader.PropertiesReader;
 
-public class BeanPropertiesScanner{
+public class BeanPropertiesScanner implements ApplicationContextAware{
 	
 	@Autowired
 	private ApplicationContext context;
@@ -67,6 +69,12 @@ public class BeanPropertiesScanner{
 			throw new PropertiesInjectException("找不到指定的类",e);
 		}
 		for (Class<?> cls:classList){
+			Object obj=context.getBean(cls);
 		}
+	}
+	
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException{
+		this.context=applicationContext;
 	}
 }
