@@ -19,7 +19,7 @@ public class IntegerPrimaryKeyGenerator implements LengthPrimaryKeyGenerator<Int
 	@Override
 	public Integer generatePrimaryKey(int length) {
 		if (length>0) {
-			int result=0,num;
+			int result=0;
 			if(length <= 10){
 				if(length==10){
 					result=result*10+(int)(Math.random()*2);

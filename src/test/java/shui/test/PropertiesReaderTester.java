@@ -1,13 +1,11 @@
 package shui.test;
 
-import java.net.URISyntaxException;
 import java.util.List;
 
 import org.junit.Test;
 
 import junit.framework.TestCase;
 import shui.utiltools.reader.PropertiesReader;
-import shui.utiltools.reader.spring.BeanPropertiesScanner;
 
 public class PropertiesReaderTester extends TestCase{
 	
