@@ -9,6 +9,7 @@ import shui.utiltools.reader.PropertiesReader;
 
 public class SpringPropertiesReaderBean extends PropertiesReader implements BeanDefinitionRegistryPostProcessor{
 	
+	private boolean isNotLoaded=true;
 	private String location;
 
 	public String getLocation() {
@@ -19,10 +20,14 @@ public class SpringPropertiesReaderBean extends PropertiesReader implements Bean
 	}
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException{
-		// TODO Auto-generated method stub
+		if(isNotLoaded){
+			this.load(location);
+		}
 	}
 	@Override
 	public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException{
-		this.load(location);
+		if(isNotLoaded){
+			this.load(location);
+		}
 	}
 }
