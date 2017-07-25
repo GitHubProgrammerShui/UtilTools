@@ -16,7 +16,6 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.Namespace;
 import org.jdom.input.SAXBuilder;
-import org.junit.Test;
 
 import shui.utiltools.constant.DescriptionConstant;
 import shui.utiltools.exception.PropertiesBuildException;
