@@ -29,6 +29,7 @@ public class PropertiesReader{
 	private Namespace namespace;
 	
 	public PropertiesReader(){}
+	
 	public PropertiesReader(File file){
 		try {
 			this.load(new FileInputStream(file));
