@@ -67,6 +67,7 @@ public class ResourceLoader{
 		}
 	}
 	
+	@SuppressWarnings({"unchecked","rawtypes"})
 	public static <T> List<Class<T>> scanClasses(String basePackage){
 		List<Class<T>> classList=new ArrayList<>();
 		ClassLoader classLoader=ClassLoader.getSystemClassLoader();
@@ -77,9 +78,7 @@ public class ResourceLoader{
 				Collection<File> classFileList=FileUtils.listFiles(basePackageFile,null,true);
 				for(File classFile:classFileList){
 					Class loadClass = classLoader.loadClass(basePackage+ResourceLoader.getClassName(basePackageFile,classFile));
-					if(loadClass.isLocalClass()){
-						classList.add(loadClass);
-					}
+					classList.add(loadClass);
 				}
 			} catch (ClassNotFoundException e){
 				throw new ResourceLoaderException("没有找到指定的类",e);
