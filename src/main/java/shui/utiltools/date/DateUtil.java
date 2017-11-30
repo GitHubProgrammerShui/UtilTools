@@ -19,7 +19,7 @@ public class DateUtil {
 	 * @param range 截断范围
 	 * @return
 	 */
-	public static Date truncateDate(Date date,TruncateOrFillRange range){
+	public static Date truncateDate(Date date,TimeUnit range){
 		Date resultDate=null;
 		Calendar calendar=Calendar.getInstance();
 		calendar.setTime(date);
@@ -58,7 +58,7 @@ public class DateUtil {
 	 * @param range 填充范围
 	 * @return
 	 */
-	public static Date fillDate(Date date,TruncateOrFillRange range){
+	public static Date fillDate(Date date,TimeUnit range){
 		Date resultDate=null;
 		Calendar calendar=Calendar.getInstance();
 		resultDate=truncateDate(date, range);
